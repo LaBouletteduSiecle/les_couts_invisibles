@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La boulette du siècle — On en paie tous le prix</title>
+<title>Les coûts cachés — Ce qui n'a pas été compté…</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -94,18 +94,6 @@ nav, header {
   font-size: clamp(1.2rem, 2vw, 1.7rem); font-weight: 600;
   color: #1e3a2f; line-height: 1.4; max-width: 580px;
   opacity: 0; animation: fadeUp 0.7s ease forwards 0.85s;
-}
-.hero-pivot {
-  font-size: clamp(1.5rem, 2.6vw, 2.1rem); font-weight: 700;
-  color: #1e3a2f; line-height: 1.3; max-width: 700px;
-  margin-bottom: 1.5rem;
-  opacity: 0; animation: fadeUp 0.7s ease forwards 0.7s;
-}
-.hero-chute {
-  font-size: clamp(1.4rem, 2.4vw, 1.9rem); font-weight: 700;
-  color: #e85d04; line-height: 1.3; max-width: 700px;
-  margin-top: 1.5rem;
-  opacity: 0; animation: fadeUp 0.7s ease forwards 1.1s;
 }
 .scroll-hint {
   position: absolute; bottom: 4vh; left: 50%; transform: translateX(-50%);
@@ -235,12 +223,12 @@ nav, header {
 .anchor.visible { opacity: 1; transform: translateY(0); }
 .anchor-range {
   font-size: clamp(3.5rem, 8vw, 7rem); font-weight: 700;
-  color: #e85d04;
+  color: #1e3a2f;
   letter-spacing: 0.08em; margin-bottom: 2.5rem;
   font-family: var(--sans);
 }
 .anchor-text { font-size: 1.6rem; color: #1e3a2f; max-width: 580px; line-height: 1.6; font-weight: 600; }
-.anchor-text strong { font-weight: 700; color: #1e3a2f; }
+.anchor-text strong { font-weight: 700; color: var(--ink); }
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 @keyframes pulse { 0%,100% { opacity: 0.8; transform: scale(1); } 50% { opacity: 0.2; transform: scale(0.45); } }
 @keyframes scrollPulse { 0%,100% { opacity: 0.25; } 50% { opacity: 0.8; } }
@@ -285,28 +273,28 @@ nav, header {
 }
 .card:hover { background: var(--white); }
 .card.hidden { display: none; }
-.card-domain { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink3); font-family: var(--mono); }
+.card-domain { font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink3); font-family: var(--mono); }
 .card-number { font-size: clamp(1.6rem, 2.8vw, 2.2rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; color: var(--red); }
-.card-unit { font-size: 0.88rem; font-weight: 400; color: var(--ink2); display: block; margin-top: 0.15rem; }
+.card-unit { font-size: 0.75rem; font-weight: 400; color: var(--ink2); display: block; margin-top: 0.15rem; }
 .card-title { font-size: 1.05rem; font-weight: 600; color: var(--ink); line-height: 1.3; }
 .card-sub { font-size: 0.85rem; color: var(--red); line-height: 1.55; }
 .card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 0.8rem; border-top: 1px solid var(--line); }
-.card-epoch { font-size: 0.78rem; color: var(--ink3); font-family: var(--mono); }
-.badge { display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.78rem; padding: 0.18rem 0.45rem; border-radius: 2px; font-weight: 600; letter-spacing: 0.03em; font-family: var(--mono); }
+.card-epoch { font-size: 0.65rem; color: var(--ink3); font-family: var(--mono); }
+.badge { display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.65rem; padding: 0.18rem 0.45rem; border-radius: 2px; font-weight: 600; letter-spacing: 0.03em; font-family: var(--mono); }
 .badge.v { background: var(--green-bg); color: var(--green); }
 .badge.e { background: var(--orange-bg); color: var(--orange); }
 .badge.c { background: var(--blue-bg); color: var(--blue); }
 .card-arrow { position: absolute; bottom: 1.6rem; right: 1.6rem; font-size: 0.85rem; color: var(--line); transition: color 0.15s, transform 0.15s; }
 .card:hover .card-arrow { color: var(--red); transform: translate(2px,-2px); }
 .card-evitable {
-  font-size: 0.9rem;
+  font-size: 0.78rem;
   color: var(--green);
   font-weight: 500;
   line-height: 1.4;
   padding-top: 0.3rem;
 }
 .card-evitable-label {
-  font-size: 0.72rem;
+  font-size: 0.58rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--green);
@@ -531,11 +519,10 @@ nav, header {
 
 <header>
   <div class="header-top">
-    <span class="nav-logo" onclick="goToHome()">La boulette du siècle</span>
+    <span class="nav-logo" onclick="goToHome()">Ce qui n'a pas été compté</span>
     <div class="nav-right">
       <button class="btn-apropos" onclick="openApropos()">À propos</button>
       <button class="btn-apropos" onclick="openFaq()">FAQ</button>
-      <button class="btn-apropos" onclick="openDroits()">Droits</button>
       <span class="nav-count" id="hcount" onclick="goToGrid()" style="cursor:pointer;"></span>
     </div>
   </div>
@@ -544,12 +531,10 @@ nav, header {
 <!-- ══ HERO ══ -->
 <section class="hero" id="flash-view">
   <h1 class="hero-title">
-    <span class="l1">La boulette</span>
-    <span class="l2">du siècle</span>
+    <span class="l1">Les coûts</span>
+    <span class="l2">cachés</span>
   </h1>
-  <p class="hero-pivot">Oups, on n'a pas tout compté…</p>
-  <p class="hero-sub">On parle toujours des inégalités<br>comme d'un débat moral<br>Ici, on en calcule le coût<br>En vies, en santé, en richesses</p>
-  <p class="hero-chute">Chacun de nous en paie le prix</p>
+  <p class="hero-sub">On parle toujours des inégalités<br>comme d'un débat moral<br>Ici, on les compte<br>En vies, en santé, en richesses</p>
 </section>
 
 <!-- Widget flottant -->
@@ -772,6 +757,26 @@ nav, header {
     </div>
   </div>
 
+  <!-- pnns-sans-prix · 2001-2026 · Marine · Santé/Alimentation -->
+  <div class="ep-row left" style="--ep-color:#1a2480;" onclick="openFiche('pnns-sans-prix')">
+    <div class="ep-pip"></div>
+    <div class="ep-card">
+      <h2 class="ep-title">On sait ce qu&apos;il faut manger. On n&apos;a pas décidé comment le rendre possible.</h2>
+      <p class="ep-subtitle">Vingt-cinq ans de campagne nutritionnelle. Des politiques agricoles et industrielles qui ont longtemps favorisé des aliments bon marché, souvent plus transformés. Zéro mécanisme économique ciblé.</p>
+      <div class="ep-cost-main">✓ 29 Mds €/an</div>
+      <div class="ep-cost-label">maladies cardiovasculaires · France · 2023 · 430 € par habitant</div>
+      <div class="ep-sep"></div>
+      <span class="ep-encore-header">Encore perdu en 2026 · France</span>
+      <div class="ep-current">
+        <div class="pulse-dot"></div>
+        <div>
+          <div class="ep-current-value">≈ 30-31 Mds €/an</div>
+          <span class="ep-current-label">hausse structurelle · aucun mécanisme économique ciblé déployé</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <div class="anchor" id="anchor">
@@ -914,6 +919,24 @@ nav, header {
         <span class="card-arrow">↗</span>
       </div>
 
+      <div class="card" data-domain="sante" data-badge="v" onclick="openFiche('pnns-sans-prix')">
+        <p class="card-domain">Santé · Alimentation · France</p>
+        <div>
+          <p class="card-number">29 Mds €<span class="card-unit">par an · maladies cardiovasculaires · France · 2023</span></p>
+        </div>
+        <div class="card-evitable">
+          <span class="card-evitable-label">Encore perdu en 2026 · France</span><br>
+          ≈ 30-31 Mds €/an
+        </div>
+        <p class="card-title">On sait ce qu&apos;il faut manger. On n&apos;a pas décidé comment le rendre possible.</p>
+        <p class="card-sub">Vingt-cinq ans de campagne nutritionnelle. Des politiques agricoles et industrielles qui ont longtemps favorisé des aliments bon marché, souvent plus transformés. Zéro mécanisme économique ciblé.</p>
+        <div class="card-footer">
+          <span class="badge v">✓ Documenté</span>
+          <span class="card-epoch">2001-2026</span>
+        </div>
+        <span class="card-arrow">↗</span>
+      </div>
+
       <div class="card" data-domain="technologie" data-badge="v" onclick="openFiche('faciale')">
         <p class="card-domain">Technologie · Intelligence artificielle</p>
         <div><p class="card-number">3–7 Mds €<span class="card-unit">par an, France</span></p></div>
@@ -938,11 +961,10 @@ nav, header {
 <!-- ══ FAQ OVERLAY ══ -->
 <div id="faq-overlay" style="position:fixed;inset:0;background:var(--bg);z-index:700;overflow-y:auto;display:none;">
   <header style="position:sticky;top:0;z-index:10;padding:1.2rem 5vw;display:flex;justify-content:space-between;align-items:center;background:#1e3a2f;">
-    <span class="nav-logo" onclick="goToHome()" style="cursor:pointer;">La boulette du siècle</span>
+    <span class="nav-logo" onclick="goToHome()" style="cursor:pointer;">Ce qui n'a pas été compté</span>
     <div class="nav-right">
       <button class="btn-apropos" onclick="openApropos()">À propos</button>
       <button class="btn-apropos" style="color:#fff;font-weight:700;" onclick="closeFaq()">FAQ</button>
-      <button class="btn-apropos" onclick="openDroits()">Droits</button>
       <span class="nav-count" id="hcount-faq" onclick="goToGrid()" style="cursor:pointer;"></span>
       <button class="btn-back" onclick="closeFaq()">← Retour</button>
     </div>
@@ -1011,11 +1033,10 @@ nav, header {
 <!-- ══ À PROPOS OVERLAY ══ -->
 <div id="apropos-overlay" style="position:fixed;inset:0;background:var(--bg);z-index:700;overflow-y:auto;display:none;">
   <header style="position:sticky;top:0;z-index:10;padding:1.2rem 5vw;display:flex;justify-content:space-between;align-items:center;background:#1e3a2f;">
-    <span class="nav-logo" onclick="goToHome()" style="cursor:pointer;">La boulette du siècle</span>
+    <span class="nav-logo" onclick="goToHome()" style="cursor:pointer;">Ce qui n'a pas été compté</span>
     <div class="nav-right">
       <button class="btn-apropos" style="color:#fff;font-weight:700;" onclick="closeApropos()">À propos</button>
       <button class="btn-apropos" onclick="openFaq()">FAQ</button>
-      <button class="btn-apropos" onclick="openDroits()">Droits</button>
       <span class="nav-count" id="hcount-apropos" onclick="goToGrid()" style="cursor:pointer;"></span>
       <button class="btn-back" onclick="closeApropos()">← Retour</button>
     </div>
@@ -1023,57 +1044,12 @@ nav, header {
   <div style="max-width:720px;margin:0 auto;padding:3rem 5vw 6rem;">
     <h2 style="font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;margin-bottom:2rem;line-height:1.1;">À propos</h2>
     <div class="prose">
-      <p>L'inégalité, on en a longtemps fait un débat moral. Ce projet en fait le compte.</p>
-      <p>Pendant des siècles, une partie de l'humanité a pris des décisions pour l'autre. Une règle imposée en 1139 pour protéger un patrimoine. Un Code civil qui interdit aux femmes de signer un bail jusqu'en 1965. Des crash tests menés sans mannequin féminin jusqu'en 2003. Des algorithmes entraînés sur des données qui excluent la moitié de la population.</p>
-      <p>À chaque fois, la même boulette : oublier de compter avec la moitié, ou plus, du monde.</p>
-      <p>Ces décisions ont coûté. En vies, en santé, en richesses non produites, en crises sociales et financières.</p>
-      <p>Chaque fiche part d'un fait documenté, suit une logique, et arrive à un chiffre. Trois indicateurs marquent le degré de certitude : ✓ Documenté, ≈ Estimation, ? Probabilité. Les hypothèses sont écrites en clair. Vous pouvez les contester.</p>
-      <p>Si on additionne les seuls cas traités ici, la facture annuelle dépasse 110 milliards d'euros en France et plusieurs dizaines de milliards de dollars aux États-Unis. Pour des décisions prises il y a des décennies ou des siècles. Et qui, souvent, perdurent encore.</p>
-    </div>
-  </div>
-</div>
-
-<!-- ══ DROITS OVERLAY ══ -->
-<div id="droits-overlay" style="position:fixed;inset:0;background:var(--bg);z-index:700;overflow-y:auto;display:none;">
-  <header style="position:sticky;top:0;z-index:10;padding:1.2rem 5vw;display:flex;justify-content:space-between;align-items:center;background:#1e3a2f;">
-    <span class="nav-logo" onclick="goToHome()" style="cursor:pointer;">La boulette du siècle</span>
-    <div class="nav-right">
-      <button class="btn-apropos" onclick="openApropos()">À propos</button>
-      <button class="btn-apropos" onclick="openFaq()">FAQ</button>
-      <button class="btn-apropos" style="color:#fff;font-weight:700;" onclick="closeDroits()">Droits</button>
-      <span class="nav-count" id="hcount-droits" onclick="goToGrid()" style="cursor:pointer;"></span>
-      <button class="btn-back" onclick="closeDroits()">← Retour</button>
-    </div>
-  </header>
-  <div style="max-width:720px;margin:0 auto;padding:3rem 5vw 6rem;">
-    <h2 style="font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;margin-bottom:2rem;line-height:1.1;">Droits</h2>
-    <div class="prose">
-      <h3 style="font-size:1.2rem;font-weight:700;margin-top:1.5rem;margin-bottom:0.5rem;">Éditeur du site</h3>
-      <p>Charly Samax<br>Contact : Charly_Samax@proton.me</p>
-
-      <h3 style="font-size:1.2rem;font-weight:700;margin-top:1.5rem;margin-bottom:0.5rem;">Hébergement</h3>
-      <p>GitHub Pages (GitHub Inc., 88 Colin P. Kelly Jr Street, San Francisco, CA 94107, États-Unis)</p>
-
-      <h3 style="font-size:1.2rem;font-weight:700;margin-top:1.5rem;margin-bottom:0.5rem;">Droits d'utilisation</h3>
-      <p>L'ensemble des contenus de ce site (textes, visuels, structure des fiches, sélection et organisation des données, raisonnements, méthodologie de chiffrage) est protégé par le droit d'auteur et par le droit des bases de données (articles L.341-1 et suivants du Code de la propriété intellectuelle français).</p>
-
-      <p><strong>Sont autorisées sans demande préalable :</strong></p>
-      <ul style="margin-left:1.5rem;margin-bottom:1rem;">
-        <li>les citations courtes avec mention de la source (URL du site)</li>
-        <li>les liens hypertextes vers les pages du site</li>
-        <li>l'utilisation pour un usage strictement personnel et privé</li>
-      </ul>
-
-      <p><strong>Sont soumises à autorisation écrite préalable :</strong></p>
-      <ul style="margin-left:1.5rem;margin-bottom:1rem;">
-        <li>toute reproduction, totale ou partielle, des textes, fiches, visuels ou structures</li>
-        <li>toute réutilisation dans un cadre professionnel, commercial, éditorial, pédagogique ou institutionnel (livre, article, rapport, formation, présentation, outil, plateforme, etc.)</li>
-        <li>toute extraction substantielle ou répétée de la base de données</li>
-        <li>toute adaptation, traduction ou dérivation</li>
-        <li>toute utilisation pour entraîner ou alimenter un modèle d'intelligence artificielle</li>
-      </ul>
-
-      <p>Les demandes d'autorisation peuvent être adressées à Charly_Samax@proton.me.</p>
+      <p>On a longtemps mesuré l'inégalité comme un problème moral. Ce projet la mesure autrement : comme un coût.</p>
+      <p>Pendant des siècles, une partie de l'humanité a pris des décisions pour l'autre. Une règle imposée en 1139 pour protéger un patrimoine. Un code civil qui interdit aux femmes de signer un bail jusqu'en 1965. Des crash tests menés sans mannequin féminin jusqu'en 2003. Des algorithmes entraînés sur des données qui excluent la moitié de la population.</p>
+      <p>Ce projet ne pose pas de question morale. Il pose une question comptable : qu'est-ce que ces absences ont coûté ? En vies, en santé, en richesses non produites, en crises évitables.</p>
+      <p>Chaque fiche part d'un fait documenté, suit une logique, et arrive à un chiffre. Ce chiffre porte toujours un indicateur d'incertitude : ✓ Documenté, ≈ Estimation, ? Probabilité. Les hypothèses sont écrites en clair. Vous pouvez les contester.</p>
+      <p>Ce n'est pas de l'histoire-fiction. C'est de l'histoire économique appliquée à des décisions qui ont été prises, et à ce qu'elles ont coûté.</p>
+      <p>Si on additionne les seuls cas traités ici, la facture annuelle dépasse 110 milliards d'euros en France, et plusieurs dizaines de milliards de dollars aux États-Unis. Pour des décisions prises il y a des décennies ou des siècles qui, souvent, perdurent encore.</p>
     </div>
   </div>
 </div>
@@ -1081,11 +1057,10 @@ nav, header {
 <!-- ══ FICHE OVERLAY ══ -->
 <div id="fiche-overlay" class="fiche-overlay">
   <header id="ficheHeader" style="position:sticky;top:0;z-index:10;padding:1.2rem 5vw;display:flex;justify-content:space-between;align-items:center;background:var(--fiche-color,#1e3a2f);border-bottom:none;">
-    <span class="nav-logo" onclick="goToHome()" style="cursor:pointer;">La boulette du siècle</span>
+    <span class="nav-logo" onclick="goToHome()" style="cursor:pointer;">Ce qui n'a pas été compté</span>
     <div class="nav-right">
       <button class="btn-apropos" onclick="openApropos()">À propos</button>
       <button class="btn-apropos" onclick="openFaq()">FAQ</button>
-      <button class="btn-apropos" onclick="openDroits()">Droits</button>
       <span class="nav-count" id="hcount-fiche" onclick="goToGrid()" style="cursor:pointer;"></span>
       <button class="btn-back" onclick="closeFiche()">← Retour</button>
     </div>
@@ -1102,11 +1077,7 @@ nav, header {
 
 <!-- ══ FOOTER ══ -->
 <footer class="site-footer">
-  <span>La boulette du siècle</span>
-  <span class="footer-sep">·</span>
-  <span>© Charly Samax</span>
-  <span class="footer-sep">·</span>
-  <a href="javascript:void(0)" onclick="openDroits()" style="color:inherit;text-decoration:underline;">Droits</a>
+  <span>Ce qui n'a pas été compté</span>
   <span class="footer-sep">·</span>
   <a href="/cdn-cgi/l/email-protection#96d5fef7e4faefc9c5f7fbf7eed6e6e4f9e2f9f8b8fbf3"><span class="__cf_email__" data-cfemail="5c1f343d2e3025030f3d313d241c2c2e33283332723139">[email&#160;protected]</span></a>
   <span class="footer-sep">·</span>
@@ -1149,6 +1120,133 @@ document.querySelectorAll('.ep-row,.era-sep,.anchor').forEach(el=>revObs.observe
 
 // ── popupData ────────────────────────────────────────────────────────────────
 const popupData = {
+  'pnns-sans-prix': {
+    domain: 'Santé · Alimentation · France',
+    epoch: '2001-2026',
+    color: '#1a2480',
+    title: 'On sait ce qu\'il faut manger. On n\'a pas décidé comment le rendre possible.',
+    dateline: '',
+    tabs: [
+      {label: 'Le chiffre',           id: 'l1'},
+      {label: 'Les faits',            id: 'l2'},
+      {label: "L'histoire",           id: 'l3f'},
+      {label: 'Et si ?',              id: 'l3cf'},
+      {label: 'Sources & références', id: 'l4'}
+    ],
+    panels: {
+      l1: `<div class="l1-block" style="background:#1a2480;">
+  <div class="l1-badges"><span class="badge v">✓ Documenté</span></div>
+  <div class="l1-number">29 milliards d'euros par an</div>
+  <p class="l1-desc">En 2001, le Programme national nutrition santé (PNNS) a demandé aux Français de manger mieux. Son message : cinq fruits et légumes par jour. Son levier : la communication. Pas le prix.<br><br>Pendant ce temps, les fruits et légumes ne représentaient que 3 % du budget agricole européen. Leurs prix ont augmenté deux fois plus vite que les salaires sur les dix années suivantes. ✓ / ≈<br><br>Vingt-cinq ans plus tard, seuls 19 % des hommes et 25 % des femmes déclarent une consommation de fruits et légumes conforme aux recommandations. ✓ La sous-consommation est associée à une part importante de la mortalité cardiovasculaire. Les maladies cardiovasculaires coûtent 29 milliards d'euros par an à l'Assurance maladie, soit 430 € par habitant. ✓<br><br>Un mécanisme économique ciblé existe sur le papier. Le chèque alimentation, dont le coût a été estimé entre 1,5 et 3,5 milliards d'euros par an par l'IGAS (Inspection générale des affaires sociales) et l'IGF (Inspection générale des finances), n'a pas été généralisé. ✓<br><br>Il n'existe pas de chiffre institutionnel français qui isole précisément le coût sanitaire imputable à cette seule sous-consommation. C'est ce que la fiche construit dans le Et si ?</p>
+  <div class="l1-sources">✓ Documenté · ≈ Estimation · ? Probabilité — Sources : Sénat, rapport n° 672, 2016-2017 · Familles Rurales, Observatoire des prix 2022-2024 · Santé publique France, Baromètre 2021 · CNAM, Points de repère n° 56, juillet 2025 · IGAS/IGF, 2021</div>
+</div>
+<div class="l1-block-evitable">
+  <div class="l1-evitable-label">Encore perdu en 2026 · France</div>
+  <div class="l1-badges"><span class="badge e">≈ Estimation</span></div>
+  <div class="l1-number">≈ 30-31 Mds €/an</div>
+  <p class="l1-desc">Les maladies cardiovasculaires restent le deuxième poste de dépenses de l'Assurance maladie, en hausse structurelle. Le PNNS n'a pas été accompagné d'un mécanisme économique massif pour rendre une alimentation saine plus accessible. La conformité aux recommandations reste minoritaire. Sources : CNAM, rapport Charges et produits 2026 · extrapolation à 2-3 %/an sur base 2023.</p>
+</div>`,
+      l2: `<div class="chain">
+  <div class="chain-step">
+    <span class="chain-year">Avant 2001</span>
+    <span class="chain-text">Depuis sa création en 1962, la Politique agricole commune (PAC) consacre une fraction marginale de son budget aux fruits et légumes : 3 % selon un rapport du Sénat de 2016-2017. Les productions les plus soutenues, céréales, sucre et produits animaux, bénéficient d'aides qui maintiennent leurs coûts de production bas. Pas les fruits et légumes. ✓ Source : Sénat, rapport n° 672, 2016-2017.</span>
+  </div>
+  <div class="chain-step">
+    <span class="chain-year">2001</span>
+    <span class="chain-text">Le gouvernement lance le PNNS (Programme national nutrition santé). La recommandation centrale : cinq fruits et légumes par jour. Le levier choisi : des campagnes de communication. Aucune mesure sur le prix, les subventions ou l'accès économique n'est prévue. ✓ Source : Ministère de la Santé, Programme national nutrition santé 2001-2005.</span>
+  </div>
+  <div class="chain-step">
+    <span class="chain-year">2001-2021</span>
+    <span class="chain-text">Sur cette période, le prix des fruits augmente de près de 50 % et celui des légumes de plus de 67 %, au-dessus de la hausse des salaires. Les produits ultra-transformés, dont les ingrédients de base sont subventionnés par la PAC, restent accessibles. Les ménages modestes consomment significativement moins de fruits et légumes que la moyenne française. L'écart social est documenté sur l'ensemble de la période. ≈ / ✓ Sources : Familles Rurales, Observatoire des prix 2022-2024 · Santé publique France, Baromètre 2021.</span>
+  </div>
+  <div class="chain-step">
+    <span class="chain-year">2006</span>
+    <span class="chain-text">Le Royaume-Uni crée les Healthy Start vouchers : des bons d'achat pour fruits, légumes et lait, ciblés sur les femmes enceintes et familles à faibles revenus. La France n'adopte pas de mécanisme équivalent. ✓ Source : NHS (National Health Service), Healthy Start scheme, 2006.</span>
+  </div>
+  <div class="chain-step">
+    <span class="chain-year">2012</span>
+    <span class="chain-text">La France introduit une taxe sur les boissons sucrées. Son montant est modeste. La TVA (taxe sur la valeur ajoutée) appliquée aux sodas et aux fruits et légumes est identique : 5,5 %. Aucune différenciation fiscale significative entre aliments ultra-transformés et produits frais. ✓ Source : Code général des impôts, article 1613 ter.</span>
+  </div>
+  <div class="chain-step">
+    <span class="chain-year">2018</span>
+    <span class="chain-text">La loi EGAlim (loi pour l'équilibre des relations commerciales dans le secteur agricole) fixe des objectifs de 50 % de produits durables et 20 % de produits biologiques dans la restauration collective publique d'ici 2022. Aucun mécanisme économique ciblé sur l'accès alimentaire des ménages modestes. ✓ Source : Loi n° 2018-938 du 30 octobre 2018.</span>
+  </div>
+  <div class="chain-step">
+    <span class="chain-year">2020-2021</span>
+    <span class="chain-text">La Convention citoyenne pour le climat propose un chèque alimentation. L'IGAS (Inspection générale des affaires sociales) et l'IGF (Inspection générale des finances) en estiment le coût potentiel entre 1,5 et 3,5 milliards d'euros par an pour 20 à 30 euros mensuels par bénéficiaire. Il s'agit d'une estimation de coût si le mécanisme était déployé, pas d'une dépense engagée. Le dispositif n'est pas généralisé. ✓ Source : rapport IGAS/IGF, 2021.</span>
+  </div>
+  <div class="chain-step">
+    <span class="chain-year">2021</span>
+    <span class="chain-text">Baromètre Santé publique France : 19,3 % des hommes et 25,2 % des femmes de 18 à 85 ans déclarent une consommation de fruits et légumes conforme aux recommandations du PNNS. L'objectif reste hors d'atteinte pour l'essentiel de la population. ✓ Source : Santé publique France, BEH (Bulletin épidémiologique hebdomadaire) n° 13, juin 2025.</span>
+  </div>
+  <div class="chain-step">
+    <span class="chain-year">2023</span>
+    <span class="chain-text">Le programme Mieux manger pour tous (PMMPT) est confié à l'Agence Phare par la DGCS (Direction générale de la cohésion sociale). C'est la première politique nationale à agir sur la composition de l'offre alimentaire dans l'aide alimentaire, pas uniquement sur la recommandation. ✓ Source : DGCS, cahier des charges PMMPT, 2023.</span>
+  </div>
+</div>
+<div class="sec-title">L'angle mort</div>
+<div class="prose"><p>Le lien entre sous-consommation de fruits et légumes et maladies cardiovasculaires, diabète de type 2 et certains cancers est documenté. Mais aucune institution française n'a publié de chiffre consolidé qui isole précisément le coût sanitaire en euros imputable à cette seule sous-consommation.</p><p>Deux raisons à cela. D'abord, la causalité est difficile à isoler : l'alimentation est un facteur de risque parmi d'autres, aux côtés de la sédentarité, du tabac et de la génétique. Ensuite, les données de consommation et les données de coût sanitaire ne sont pas produites dans le même périmètre ni selon les mêmes méthodes. Les croiser exige une modélisation, pas une lecture directe. C'est ce que le Et si ? tente de construire.</p></div>
+<div class="proof-list">
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Fruits et légumes : 3 % du budget PAC · Sénat, rapport n° 672, 2016-2017</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">PNNS 2001 : levier communication, aucun mécanisme de prix · Ministère de la Santé, PNNS 2001-2005</span></div>
+  <div class="proof-row"><span class="proof-sym e">≈</span><span class="proof-text">Prix fruits +50 %, légumes +67 % sur 10 ans, au-dessus des salaires · Familles Rurales, Observatoire 2022-2024</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Écart de consommation fruits/légumes entre ménages modestes et moyenne française · Santé publique France, Baromètre 2021</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Healthy Start UK créé en 2006 · NHS, Healthy Start scheme</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">TVA fruits/légumes et sodas identique : 5,5 % · Code général des impôts, art. 1613 ter</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Coût estimé d'un chèque alimentation : 1,5-3,5 Mds€/an si déployé · rapport IGAS/IGF, 2021</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">19,3 % hommes / 25,2 % femmes atteignent les recommandations en 2021 · Santé publique France, BEH 2025</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">PMMPT confié à Phare, 2023 · DGCS, cahier des charges</span></div>
+</div>`,
+      l3f: `<div class="prose"><p>Pendant longtemps, la santé publique française a surtout pensé qu'il suffisait d'informer les gens pour qu'ils changent leurs habitudes. Cette logique a eu de vrais résultats pour certaines campagnes de prévention, mais elle montre vite ses limites quand le problème touche aussi au budget, aux prix et à l'accès réel aux aliments.</p><p>L'alimentation a longtemps été vue comme une affaire de choix individuel. On a surtout dit aux gens quoi manger, sans agir assez sur ce qui rendait ces choix difficiles : le prix des produits frais, l'offre disponible, ou encore ce que distribue l'aide alimentaire.</p><p>Les prix ne sont pas neutres. La politique agricole européenne a longtemps soutenu surtout les grandes productions : céréales, sucre, produits animaux. Les fruits et légumes ne représentent que 3 % du budget de cette politique. ✓ Les produits transformés, dont les ingrédients de base sont subventionnés, ont pris une grande place dans l'alimentation quotidienne. Pendant ce temps, le prix des fruits a augmenté de près de 50 % et celui des légumes de plus de 67 % sur dix ans, au-dessus de la hausse des salaires. ≈</p><p>Agir sur les prix ou les subventions n'était pas impossible, mais cela restait en dehors du cadre dominant. L'intervention économique de l'État dans l'alimentation était souvent perçue comme trop intrusive. On a continué à privilégier la recommandation.</p><p>À partir des années 2010, cette vision commence à bouger. La Convention citoyenne pour le climat (2020) propose un chèque alimentation. Le débat public reconnaît enfin qu'on ne peut pas parler d'alimentation saine sans parler d'argent.</p><p>C'est aussi dans ce mouvement que s'inscrit le programme Mieux manger pour tous : il ne se contente pas de recommander, il essaie d'améliorer concrètement l'accès à une alimentation plus saine dans l'aide alimentaire. L'Agence Phare en assure le suivi et l'évaluation depuis 2023.</p></div>
+<div class="proof-list">
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Fruits et légumes : 3 % du budget PAC · Sénat, rapport n° 672, 2016-2017</span></div>
+  <div class="proof-row"><span class="proof-sym e">≈</span><span class="proof-text">Prix fruits +50 %, légumes +67 % sur 10 ans · Familles Rurales, Observatoire des prix 2022-2024</span></div>
+</div>`,
+      l3cf: `<div class="etsi-header"><span class="etsi-badge">Et si ?</span></div>
+<div class="cf-note">Ce raisonnement part de données documentées. Les hypothèses sont expliquées étape par étape.</div>
+<div class="sec-title">Et si la France avait mis en place un mécanisme économique ciblé dès 2001 ?</div>
+<div class="prose"><p>En 2021, l'IGAS (Inspection générale des affaires sociales) et l'IGF (Inspection générale des finances) ont estimé qu'un chèque alimentation de 20 à 30 euros par mois et par personne coûterait entre 1,5 et 3,5 milliards d'euros par an. C'est une estimation de coût potentiel, pas une dépense réellement engagée. ✓</p><p>Le Royaume-Uni a mis en place dès 2006 les Healthy Start vouchers, des bons d'achat destinés aux femmes enceintes et aux familles à faibles revenus. ✓</p><p>Les maladies cardiovasculaires, dont la sous-consommation de fruits et légumes est un facteur de risque documenté, coûtent 29 milliards d'euros par an à l'Assurance maladie française. ✓</p><p>Si un mécanisme comparable avait été déployé en France dès 2001, son coût cumulé sur 25 ans aurait été compris entre 37 et 87 milliards d'euros. ≈</p><p>Ce montant est à mettre en regard du coût annuel des maladies cardiovasculaires. Il ne permet pas de dire combien de dépenses de santé auraient été évitées, car aucune source institutionnelle française ne chiffre précisément la part imputable à la seule sous-consommation de fruits et légumes. ?</p><p>Ce qu'on peut dire, en revanche : deux inspections générales de l'État ont chiffré le mécanisme, mais il n'a pas été généralisé. Pendant 25 ans, les prix des fruits et légumes ont augmenté plus vite que les salaires, et l'objectif du PNNS (Programme national nutrition santé) reste hors d'atteinte pour l'essentiel de la population.</p></div>
+<div class="proof-list">
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Coût estimé du chèque alimentation : 1,5 à 3,5 Mds€/an · IGAS/IGF, 2021</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Healthy Start UK, 2006 · NHS, Healthy Start scheme</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Coût maladies cardiovasculaires : 29 Mds€/an · CNAM, Points de repère n° 56, juillet 2025</span></div>
+  <div class="proof-row"><span class="proof-sym e">≈</span><span class="proof-text">Coût cumulé du mécanisme sur 25 ans : 37 à 87 Mds€ · Extrapolation arithmétique sur données IGAS/IGF</span></div>
+  <div class="proof-row"><span class="proof-sym c">?</span><span class="proof-text">Part du coût cardiovasculaire imputable à la sous-consommation · Non chiffrable sans source institutionnelle française</span></div>
+</div>`,
+      l4: `<div class="sec-title">Politique nutritionnelle</div>
+<ul class="src-list">
+  <li>Ministère de la Santé et de la Prévention — Programme national nutrition santé 2001-2005. Paris, 2001.</li>
+  <li>Santé publique France — &laquo; La consommation de fruits et légumes des adultes en France &raquo;, Bulletin épidémiologique hebdomadaire (BEH) n° 13, juin 2025.</li>
+</ul>
+<div class="sec-title">Politique agricole</div>
+<ul class="src-list">
+  <li>Sénat — rapport n° 672, &laquo; L'avenir de la politique agricole commune à l'horizon 2020 &raquo;, 2016-2017. [Données sur la répartition du budget PAC : 3 % pour les fruits et légumes.]</li>
+</ul>
+<div class="sec-title">Prix alimentaires</div>
+<ul class="src-list">
+  <li>Familles Rurales — Observatoire des prix des fruits et légumes, éditions 2022, 2023 et 2024. [Hausse des prix des fruits et légumes sur 10 ans.]</li>
+</ul>
+<div class="sec-title">Mécanismes économiques ciblés</div>
+<ul class="src-list">
+  <li>IGAS (Inspection générale des affaires sociales) et IGF (Inspection générale des finances) — rapport sur le chèque alimentation, 2021. [Estimation du coût potentiel : 1,5 à 3,5 Mds€/an.]</li>
+  <li>NHS (National Health Service) — Healthy Start scheme, Royaume-Uni, 2006.</li>
+</ul>
+<div class="sec-title">Dépenses de santé</div>
+<ul class="src-list">
+  <li>CNAM (Caisse nationale de l'Assurance maladie) — &laquo; Les déterminants de la croissance des dépenses de santé de 2015 à 2023 : une analyse médicalisée &raquo;, Points de repère n° 56, juillet 2025.</li>
+  <li>CNAM — rapport annuel Charges et produits pour 2026, juillet 2025.</li>
+</ul>
+<div class="sec-title">Cadre réglementaire</div>
+<ul class="src-list">
+  <li>Loi n° 2018-938 du 30 octobre 2018 pour l'équilibre des relations commerciales dans le secteur agricole et alimentaire (loi EGAlim).</li>
+  <li>Code général des impôts, article 1613 ter.</li>
+  <li>DGCS (Direction générale de la cohésion sociale) — cahier des charges du programme Mieux manger pour tous (PMMPT), 2023.</li>
+</ul>
+<div class="sec-title">Note méthodologique</div>
+<div class="prose"><p>Le calcul du Et si ? repose sur les estimations de coût du chèque alimentation publiées par l'IGAS et l'IGF en 2021 (1,5 à 3,5 Mds€/an). La fourchette cumulée sur 25 ans (37 à 87 Mds€) est obtenue par multiplication simple : 1,5 × 25 et 3,5 × 25. Aucune actualisation ou indexation n'a été appliquée. La comparaison avec le coût annuel des maladies cardiovasculaires (29 Mds€) est indicative : aucune source institutionnelle française ne chiffre la part de ce coût directement imputable à la sous-consommation de fruits et légumes.</p></div>`
+    }
+  },
+
   'travail-dangereux': {
     domain:'Travail · Santé · Ergonomie · France', epoch:'2001–2019',
     color:'#2d6a4f',
@@ -1949,59 +2047,6 @@ const popupData = {
 };
 
 
-// ── Filtres (Domaine + Preuve) ────────────────────────────────────────────────
-function setupFilters() {
-  const domainBtns = document.querySelectorAll('.filter-btn');
-  const badgeBtns = document.querySelectorAll('.badge-filter');
-  const cards = document.querySelectorAll('.fiches-grid .card');
-  const countEl = document.getElementById('gridCount');
-  let activeDomain = 'all';
-  let activeBadge = null;
-
-  function applyFilters() {
-    let visible = 0;
-    cards.forEach(card => {
-      const cardDomain = card.getAttribute('data-domain');
-      const cardBadge = card.getAttribute('data-badge');
-      const matchDomain = activeDomain === 'all' || cardDomain === activeDomain;
-      const matchBadge = activeBadge === null || cardBadge === activeBadge;
-      const show = matchDomain && matchBadge;
-      card.style.display = show ? '' : 'none';
-      if (show) visible++;
-    });
-    if (countEl) {
-      countEl.textContent = visible + (visible > 1 ? ' fiches' : ' fiche');
-    }
-  }
-
-  domainBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      domainBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeDomain = btn.getAttribute('data-domain');
-      applyFilters();
-    });
-  });
-
-  badgeBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const badge = btn.getAttribute('data-badge');
-      if (activeBadge === badge) {
-        activeBadge = null;
-        btn.classList.remove('active');
-      } else {
-        badgeBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        activeBadge = badge;
-      }
-      applyFilters();
-    });
-  });
-
-  applyFilters();
-}
-document.addEventListener('DOMContentLoaded', setupFilters);
-
 // ── syncNavCounts ──────────────────────────────────────────────────────────────
 function syncNavCounts() {
   const n = document.querySelectorAll('.ep-row').length;
@@ -2037,7 +2082,6 @@ function goToGrid() {
 function openFaq() {
   document.getElementById('fiche-overlay').style.display = 'none';
   document.getElementById('apropos-overlay').style.display = 'none';
-  document.getElementById('droits-overlay').style.display = 'none';
   document.getElementById('faq-overlay').style.display = 'block';
   window.scrollTo(0, 0);
 }
@@ -2049,24 +2093,11 @@ function closeFaq() {
 function openApropos() {
   document.getElementById('fiche-overlay').style.display = 'none';
   document.getElementById('faq-overlay').style.display = 'none';
-  document.getElementById('droits-overlay').style.display = 'none';
   document.getElementById('apropos-overlay').style.display = 'block';
   window.scrollTo(0, 0);
 }
 function closeApropos() {
   document.getElementById('apropos-overlay').style.display = 'none';
-}
-
-// ── Droits ────────────────────────────────────────────────────────────────────
-function openDroits() {
-  document.getElementById('fiche-overlay').style.display = 'none';
-  document.getElementById('faq-overlay').style.display = 'none';
-  document.getElementById('apropos-overlay').style.display = 'none';
-  document.getElementById('droits-overlay').style.display = 'block';
-  window.scrollTo(0, 0);
-}
-function closeDroits() {
-  document.getElementById('droits-overlay').style.display = 'none';
 }
 
 // ── openFiche ─────────────────────────────────────────────────────────────────
@@ -2176,6 +2207,7 @@ function copyLink() {
     { id:"kariko",    stat:"170 000–350 000", unit:"",           sub:"Ordre de grandeur · 1989–2006" },
     { id:"education", stat:"15 000 Mds",      unit:"$",               sub:"Coût mondial · 1808–1924" },
     { id:"nourrir",   stat:"1 000 Mds",       unit:"$/an",            sub:"Mondial" },
+    { id:"pnns-sans-prix", stat:"29 Mds", unit:"€/an", sub:"Maladies cardiovasculaires · France · 2023" },
     { id:"celibat",   stat:"1–4 M",      unit:"victimes",        sub:"Estimées depuis 1139" },
     { id:"adam",      stat:"12 000–28 000", unit:"Mds $/an", sub:"Mondial · depuis 1965" },
   ];
