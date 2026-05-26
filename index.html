@@ -757,21 +757,21 @@ nav, header {
     </div>
   </div>
 
-  <!-- pnns-sans-prix · 2001-2026 · Marine · Santé/Alimentation -->
-  <div class="ep-row left" style="--ep-color:#1a2480;" onclick="openFiche('pnns-sans-prix')">
+  <!-- aide-alimentaire-surplus · 1984-2026 · Bleu · Santé/Alimentation -->
+  <div class="ep-row left" style="--ep-color:#1469c7;" onclick="openFiche('aide-alimentaire-surplus')">
     <div class="ep-pip"></div>
     <div class="ep-card">
-      <h2 class="ep-title">Mieux manger, vraiment ?</h2>
-      <p class="ep-subtitle">Vingt-cinq ans de campagne nutritionnelle. Des politiques agricoles et industrielles qui ont longtemps favorisé des aliments bon marché, souvent plus transformés. Zéro mécanisme économique ciblé.</p>
-      <div class="ep-cost-main">✓ 29 Mds €/an</div>
-      <div class="ep-cost-label">maladies cardiovasculaires · France · 2023 · 430 € par habitant</div>
+      <h2 class="ep-title">La générosité déséquilibrée</h2>
+      <p class="ep-subtitle">Pendant quarante ans, l&apos;aide alimentaire a distribué ce qui était disponible. Pas ce dont les bénéficiaires avaient besoin.</p>
+      <div class="ep-cost-main">? 86 M€/an</div>
+      <div class="ep-cost-label">coût annuel estimé · borne basse · France · 2005-2023</div>
       <div class="ep-sep"></div>
       <span class="ep-encore-header">Encore perdu en 2026 · France</span>
       <div class="ep-current">
         <div class="pulse-dot"></div>
         <div>
-          <div class="ep-current-value">≈ 30-31 Mds €/an</div>
-          <span class="ep-current-label">hausse structurelle · aucun mécanisme économique ciblé déployé</span>
+          <div class="ep-current-value">✓ 80 M€/an</div>
+          <span class="ep-current-label">la logique de surplus reste le cadre dominant · le PMMPT la corrige à la marge</span>
         </div>
       </div>
     </div>
@@ -919,20 +919,20 @@ nav, header {
         <span class="card-arrow">↗</span>
       </div>
 
-      <div class="card" data-domain="sante" data-badge="v" onclick="openFiche('pnns-sans-prix')">
-        <p class="card-domain">Santé · Alimentation · France</p>
+      <div class="card" data-domain="sante" data-badge="c" onclick="openFiche('aide-alimentaire-surplus')">
+        <p class="card-domain">Santé · Aide alimentaire · France</p>
         <div>
-          <p class="card-number">29 Mds €<span class="card-unit">par an · maladies cardiovasculaires · France · 2023</span></p>
+          <p class="card-number">86 M€<span class="card-unit">par an · coût estimé · borne basse · France</span></p>
         </div>
         <div class="card-evitable">
           <span class="card-evitable-label">Encore perdu en 2026 · France</span><br>
-          ≈ 30-31 Mds €/an
+          ✓ 80 M€/an
         </div>
-        <p class="card-title">Mieux manger, vraiment ?</p>
-        <p class="card-sub">Vingt-cinq ans de campagne nutritionnelle. Des politiques agricoles et industrielles qui ont longtemps favorisé des aliments bon marché, souvent plus transformés. Zéro mécanisme économique ciblé.</p>
+        <p class="card-title">La générosité déséquilibrée</p>
+        <p class="card-sub">Pendant quarante ans, l&apos;aide alimentaire a distribué ce qui était disponible. La facture sanitaire estimée dépasse le coût du programme qui aurait pu l&apos;éviter.</p>
         <div class="card-footer">
-          <span class="badge v">✓ Documenté</span>
-          <span class="card-epoch">2001-2026</span>
+          <span class="badge c">? Probabilité</span>
+          <span class="card-epoch">1984-2026</span>
         </div>
         <span class="card-arrow">↗</span>
       </div>
@@ -1120,11 +1120,11 @@ document.querySelectorAll('.ep-row,.era-sep,.anchor').forEach(el=>revObs.observe
 
 // ── popupData ────────────────────────────────────────────────────────────────
 const popupData = {
-  'pnns-sans-prix': {
-    domain: 'Santé · Alimentation · France',
-    epoch: '2001-2026',
-    color: '#1a2480',
-    title: 'Mieux manger, vraiment ?',
+  'aide-alimentaire-surplus': {
+    domain: 'Santé · Aide alimentaire · France',
+    epoch: '1984-2026',
+    color: '#1469c7',
+    title: 'La générosité déséquilibrée',
     dateline: '',
     tabs: [
       {label: 'Le chiffre',           id: 'l1'},
@@ -1134,116 +1134,108 @@ const popupData = {
       {label: 'Sources & références', id: 'l4'}
     ],
     panels: {
-      l1: `<div class="l1-block" style="background:#1a2480;">
-  <div class="l1-badges"><span class="badge v">✓ Documenté</span></div>
-  <div class="l1-number">29 milliards d'euros par an</div>
-  <p class="l1-desc">En 2001, le Programme national nutrition santé (PNNS) a demandé aux Français de manger mieux. Son message : cinq fruits et légumes par jour. Son levier : la communication. Pas le prix.<br><br>Pendant ce temps, les fruits et légumes ne représentaient que 3 % du budget agricole européen. Leurs prix ont augmenté deux fois plus vite que les salaires sur les dix années suivantes. ✓ / ≈<br><br>Vingt-cinq ans plus tard, seuls 19 % des hommes et 25 % des femmes déclarent une consommation de fruits et légumes conforme aux recommandations. ✓ La sous-consommation est associée à une part importante de la mortalité cardiovasculaire. Les maladies cardiovasculaires coûtent 29 milliards d'euros par an à l'Assurance maladie, soit 430 € par habitant. ✓<br><br>Un mécanisme économique ciblé existe sur le papier. Le chèque alimentation, dont le coût a été estimé entre 1,5 et 3,5 milliards d'euros par an par l'IGAS (Inspection générale des affaires sociales) et l'IGF (Inspection générale des finances), n'a pas été généralisé. ✓<br><br>Il n'existe pas de chiffre institutionnel français qui isole précisément le coût sanitaire imputable à cette seule sous-consommation. C'est ce que la fiche construit dans le Et si ?</p>
-  <div class="l1-sources">✓ Documenté · ≈ Estimation · ? Probabilité — Sources : Sénat, rapport n° 672, 2016-2017 · Familles Rurales, Observatoire des prix 2022-2024 · Santé publique France, Baromètre 2021 · CNAM, Points de repère n° 56, juillet 2025 · IGAS/IGF, 2021</div>
+      l1: `<div class="l1-block" style="background:#1469c7;">
+  <div class="l1-badges"><span class="badge c">? Probabilité</span></div>
+  <div class="l1-number">≈ 86 millions d'euros par an</div>
+  <p class="l1-desc">En 1984, les premières Banques Alimentaires françaises sont créées pour redistribuer des denrées encore consommables qui étaient détruites ou jetées. L'urgence étant de nourrir, la question de la qualité nutritionnelle n'est pas posée. Cette logique structure l'aide alimentaire pendant quarante ans.<br><br>En 2004-2005, l'InVS (Institut national de veille sanitaire) mesure pour la première fois l'état nutritionnel des bénéficiaires. Seulement 1,2 % atteignent les recommandations en fruits et légumes. ✓ L'obésité touche 28,8 % des bénéficiaires, contre 17 % en population générale. Le diabète touche 8,9 % des femmes bénéficiaires, contre 3,3 % en population générale. ✓<br><br>En appliquant les coûts institutionnels de prise en charge à cet écart documenté, avec une hypothèse d'attribution basse et conservatrice de 25 %, le coût annuel estimé pour la collectivité est de l'ordre de 86 millions d'euros par an, soit 1,5 milliard d'euros sur dix-huit ans. ?<br><br>En 2023, le gouvernement lance le programme Mieux manger pour tous (PMMPT). Son budget : 80 millions d'euros par an. Moins que le coût estimé de l'inaction.</p>
+  <div class="l1-sources">✓ Documenté · ≈ Estimation · ? Probabilité — Sources : InVS/Santé publique France, études ABENA 2004-2005 et 2011-2012 · Cour des comptes, juillet 2025 · DGCS, PMMPT 2023</div>
 </div>
 <div class="l1-block-evitable">
   <div class="l1-evitable-label">Encore perdu en 2026 · France</div>
-  <div class="l1-badges"><span class="badge e">≈ Estimation</span></div>
-  <div class="l1-number">≈ 30-31 Mds €/an</div>
-  <p class="l1-desc">Les maladies cardiovasculaires restent le deuxième poste de dépenses de l'Assurance maladie, en hausse structurelle. Le PNNS n'a pas été accompagné d'un mécanisme économique massif pour rendre une alimentation saine plus accessible. La conformité aux recommandations reste minoritaire. Sources : CNAM, rapport Charges et produits 2026 · extrapolation à 2-3 %/an sur base 2023.</p>
+  <div class="l1-badges"><span class="badge v">✓ Documenté</span></div>
+  <div class="l1-number">80 M€/an</div>
+  <p class="l1-desc">En 2026, le programme est en cours. La logique de surplus reste le cadre dominant : le PMMPT (Programme Mieux manger pour tous) la corrige à la marge, sans la remplacer. 4 millions de bénéficiaires sont concernés par les nouvelles orientations nutritionnelles. Source : DGCS, programme Mieux manger pour tous, 2025-2026.</p>
 </div>`,
       l2: `<div class="chain">
   <div class="chain-step">
-    <span class="chain-year">Avant 2001</span>
-    <span class="chain-text">Depuis sa création en 1962, la Politique agricole commune (PAC) consacre une fraction marginale de son budget aux fruits et légumes : 3 % selon un rapport du Sénat de 2016-2017. Les productions les plus soutenues, céréales, sucre et produits animaux, bénéficient d'aides qui maintiennent leurs coûts de production bas. Pas les fruits et légumes. ✓ Source : Sénat, rapport n° 672, 2016-2017.</span>
+    <span class="chain-year">1984</span>
+    <span class="chain-text">En hiver 1984, Bernard Dandrel crée la première Banque Alimentaire de France à Arcueil. L'idée vient d'une tribune publiée dans La Croix : des denrées encore consommables sont détruites pendant que des gens ont faim. La solution est logistique : collecter les surplus des industries agroalimentaires et de la grande distribution, les redistribuer. La qualité nutritionnelle de ce qui est collecté n'est pas un critère. ✓ Source : Fédération Française des Banques Alimentaires.</span>
   </div>
   <div class="chain-step">
-    <span class="chain-year">2001</span>
-    <span class="chain-text">Le gouvernement lance le PNNS (Programme national nutrition santé). La recommandation centrale : cinq fruits et légumes par jour. Le levier choisi : des campagnes de communication. Aucune mesure sur le prix, les subventions ou l'accès économique n'est prévue. ✓ Source : Ministère de la Santé, Programme national nutrition santé 2001-2005.</span>
+    <span class="chain-year">1987</span>
+    <span class="chain-text">En décembre 1987, le Conseil européen crée le PEAD (Programme européen d'aide aux plus démunis) par le règlement n° 3740/87. Ce programme redistribue les surplus agricoles de la PAC (Politique agricole commune) aux associations caritatives. Les matières premières distribuées sont principalement des céréales, du riz, du sucre, de la poudre de lait et du beurre. La logique de surplus devient institutionnelle à l'échelle européenne. Ces stocks d'intervention coûtaient plus cher à stocker qu'à distribuer. ✓ Source : règlement CEE n° 3740/87 · Ministère de l'Agriculture · Sénat, E7845.</span>
   </div>
   <div class="chain-step">
-    <span class="chain-year">2001-2021</span>
-    <span class="chain-text">Sur cette période, le prix des fruits augmente de près de 50 % et celui des légumes de plus de 67 %, au-dessus de la hausse des salaires. Les produits ultra-transformés, dont les ingrédients de base sont subventionnés par la PAC, restent accessibles. Les ménages modestes consomment significativement moins de fruits et légumes que la moyenne française. L'écart social est documenté sur l'ensemble de la période. ≈ / ✓ Sources : Familles Rurales, Observatoire des prix 2022-2024 · Santé publique France, Baromètre 2021.</span>
+    <span class="chain-year">2004-2005</span>
+    <span class="chain-text">L'InVS (Institut national de veille sanitaire, devenu Santé publique France) conduit la première étude ABENA (Alimentation et état nutritionnel des bénéficiaires de l'aide alimentaire). C'est la première fois qu'une institution française mesure l'état nutritionnel des personnes ayant recours à l'aide alimentaire. Résultat : seulement 1,2 % des bénéficiaires atteignent les recommandations en fruits et légumes. Des déficits vitaminiques sont cliniquement mesurés. ✓ Source : InVS/Santé publique France, étude ABENA 2004-2005, BEH n° 11-12, 21 mars 2006.</span>
   </div>
   <div class="chain-step">
-    <span class="chain-year">2006</span>
-    <span class="chain-text">Le Royaume-Uni crée les Healthy Start vouchers : des bons d'achat pour fruits, légumes et lait, ciblés sur les femmes enceintes et familles à faibles revenus. La France n'adopte pas de mécanisme équivalent. ✓ Source : NHS (National Health Service), Healthy Start scheme, 2006.</span>
-  </div>
-  <div class="chain-step">
-    <span class="chain-year">2012</span>
-    <span class="chain-text">La France introduit une taxe sur les boissons sucrées. Son montant est modeste. La TVA (taxe sur la valeur ajoutée) appliquée aux sodas et aux fruits et légumes est identique : 5,5 %. Aucune différenciation fiscale significative entre aliments ultra-transformés et produits frais. ✓ Source : Code général des impôts, article 1613 ter.</span>
-  </div>
-  <div class="chain-step">
-    <span class="chain-year">2018</span>
-    <span class="chain-text">La loi EGAlim (loi pour l'équilibre des relations commerciales dans le secteur agricole) fixe des objectifs de 50 % de produits durables et 20 % de produits biologiques dans la restauration collective publique d'ici 2022. Aucun mécanisme économique ciblé sur l'accès alimentaire des ménages modestes. ✓ Source : Loi n° 2018-938 du 30 octobre 2018.</span>
-  </div>
-  <div class="chain-step">
-    <span class="chain-year">2020-2021</span>
-    <span class="chain-text">La Convention citoyenne pour le climat propose un chèque alimentation. L'IGAS (Inspection générale des affaires sociales) et l'IGF (Inspection générale des finances) en estiment le coût potentiel entre 1,5 et 3,5 milliards d'euros par an pour 20 à 30 euros mensuels par bénéficiaire. Il s'agit d'une estimation de coût si le mécanisme était déployé, pas d'une dépense engagée. Le dispositif n'est pas généralisé. ✓ Source : rapport IGAS/IGF, 2021.</span>
-  </div>
-  <div class="chain-step">
-    <span class="chain-year">2021</span>
-    <span class="chain-text">Baromètre Santé publique France : 19,3 % des hommes et 25,2 % des femmes de 18 à 85 ans déclarent une consommation de fruits et légumes conforme aux recommandations du PNNS. L'objectif reste hors d'atteinte pour l'essentiel de la population. ✓ Source : Santé publique France, BEH (Bulletin épidémiologique hebdomadaire) n° 13, juin 2025.</span>
+    <span class="chain-year">2011-2012</span>
+    <span class="chain-text">L'étude ABENA est reconduite sur un protocole comparable, pour mesurer les évolutions. La situation ne s'est pas améliorée. L'obésité touche 28,8 % des bénéficiaires, contre 17 % en population générale. Le diabète touche 8,9 % des femmes bénéficiaires, contre 3,3 % en population générale. Aucune politique corrective ne suit. ✓ Source : InVS/ORS/Inpes/DGCS, étude ABENA 2011-2012, mars 2013.</span>
   </div>
   <div class="chain-step">
     <span class="chain-year">2023</span>
-    <span class="chain-text">Le programme Mieux manger pour tous (PMMPT) est confié à l'Agence Phare par la DGCS (Direction générale de la cohésion sociale). C'est la première politique nationale à agir sur la composition de l'offre alimentaire dans l'aide alimentaire, pas uniquement sur la recommandation. ✓ Source : DGCS, cahier des charges PMMPT, 2023.</span>
+    <span class="chain-text">Le gouvernement lance le programme Mieux manger pour tous (PMMPT), confié à l'Agence Phare par la DGCS (Direction générale de la cohésion sociale). C'est la première politique publique qui agit sur la composition nutritionnelle de ce qui est distribué dans l'aide alimentaire, pas seulement sur son volume. Elle arrive dix-huit ans après le premier diagnostic. ✓ Source : DGCS, cahier des charges PMMPT, 2023.</span>
+  </div>
+  <div class="chain-step">
+    <span class="chain-year">2025-2026</span>
+    <span class="chain-text">Le PMMPT mobilise 80 millions d'euros par an pour améliorer la qualité nutritionnelle de l'aide pour 4 millions de bénéficiaires, soit environ 20 euros par personne et par an. ✓ Source : DGCS, programme Mieux manger pour tous, 2025-2026.</span>
   </div>
 </div>
 <div class="sec-title">L'angle mort</div>
-<div class="prose"><p>Le lien entre sous-consommation de fruits et légumes et maladies cardiovasculaires, diabète de type 2 et certains cancers est documenté. Mais aucune institution française n'a publié de chiffre consolidé qui isole précisément le coût sanitaire en euros imputable à cette seule sous-consommation.</p><p>Deux raisons à cela. D'abord, la causalité est difficile à isoler : l'alimentation est un facteur de risque parmi d'autres, aux côtés de la sédentarité, du tabac et de la génétique. Ensuite, les données de consommation et les données de coût sanitaire ne sont pas produites dans le même périmètre ni selon les mêmes méthodes. Les croiser exige une modélisation, pas une lecture directe. C'est ce que le Et si ? tente de construire.</p></div>
+<div class="prose"><p>Les études ABENA documentent un écart nutritionnel et des prévalences élevées de maladies. Elles ne permettent pas d'établir que la qualité de l'aide alimentaire en est la cause directe : les bénéficiaires cumulent d'autres facteurs de risque liés à la précarité (stress, accès aux soins, logement). Isoler la part imputable au contenu de l'aide alimentaire nécessiterait une étude causale que ni ABENA 1 ni ABENA 2 ne prétendent constituer.</p><p>Par ailleurs, la contrainte logistique de 1984 était réelle : distribuer des produits frais à grande échelle sans infrastructure de froid n'était pas possible. Ce n'est pas ce choix initial qui est discutable, c'est qu'il n'ait jamais été révisé en quarante ans, alors que les connaissances nutritionnelles et les moyens logistiques ont évolué.</p></div>
 <div class="proof-list">
-  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Fruits et légumes : 3 % du budget PAC · Sénat, rapport n° 672, 2016-2017</span></div>
-  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">PNNS 2001 : levier communication, aucun mécanisme de prix · Ministère de la Santé, PNNS 2001-2005</span></div>
-  <div class="proof-row"><span class="proof-sym e">≈</span><span class="proof-text">Prix fruits +50 %, légumes +67 % sur 10 ans, au-dessus des salaires · Familles Rurales, Observatoire 2022-2024</span></div>
-  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Écart de consommation fruits/légumes entre ménages modestes et moyenne française · Santé publique France, Baromètre 2021</span></div>
-  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Healthy Start UK créé en 2006 · NHS, Healthy Start scheme</span></div>
-  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">TVA fruits/légumes et sodas identique : 5,5 % · Code général des impôts, art. 1613 ter</span></div>
-  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Coût estimé d'un chèque alimentation : 1,5-3,5 Mds€/an si déployé · rapport IGAS/IGF, 2021</span></div>
-  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">19,3 % hommes / 25,2 % femmes atteignent les recommandations en 2021 · Santé publique France, BEH 2025</span></div>
-  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">PMMPT confié à Phare, 2023 · DGCS, cahier des charges</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Création des Banques Alimentaires sur la logique du surplus, 1984 · FFBA</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Ouverture des surplus PAC à l'aide alimentaire, règlement CEE n° 3740/87 · Ministère de l'Agriculture, Sénat</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">1,2 % des bénéficiaires atteignent les recommandations en fruits et légumes, 2004-2005 · InVS/SPF, ABENA 2004-2005</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Obésité : 28,8 % des bénéficiaires vs 17 % en population générale, 2011-2012 · InVS/SPF, ABENA 2011-2012</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Diabète femmes : 8,9 % vs 3,3 % en population générale, 2011-2012 · InVS/SPF, ABENA 2011-2012</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">PMMPT lancé en 2023, confié à Phare · DGCS, cahier des charges 2023</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">80 M€/an · 4 millions de bénéficiaires · 2025-2026 · DGCS, PMMPT</span></div>
 </div>`,
-      l3f: `<div class="prose"><p>Pendant longtemps, la santé publique française a surtout pensé qu'il suffisait d'informer les gens pour qu'ils changent leurs habitudes. Cette logique a eu de vrais résultats pour certaines campagnes de prévention, mais elle montre vite ses limites quand le problème touche aussi au budget, aux prix et à l'accès réel aux aliments.</p><p>L'alimentation a longtemps été vue comme une affaire de choix individuel. On a surtout dit aux gens quoi manger, sans agir assez sur ce qui rendait ces choix difficiles : le prix des produits frais, l'offre disponible, ou encore ce que distribue l'aide alimentaire.</p><p>Les prix ne sont pas neutres. La politique agricole européenne a longtemps soutenu surtout les grandes productions : céréales, sucre, produits animaux. Les fruits et légumes ne représentent que 3 % du budget de cette politique. ✓ Les produits transformés, dont les ingrédients de base sont subventionnés, ont pris une grande place dans l'alimentation quotidienne. Pendant ce temps, le prix des fruits a augmenté de près de 50 % et celui des légumes de plus de 67 % sur dix ans, au-dessus de la hausse des salaires. ≈</p><p>Agir sur les prix ou les subventions n'était pas impossible, mais cela restait en dehors du cadre dominant. L'intervention économique de l'État dans l'alimentation était souvent perçue comme trop intrusive. On a continué à privilégier la recommandation.</p><p>À partir des années 2010, cette vision commence à bouger. La Convention citoyenne pour le climat (2020) propose un chèque alimentation. Le débat public reconnaît enfin qu'on ne peut pas parler d'alimentation saine sans parler d'argent.</p><p>C'est aussi dans ce mouvement que s'inscrit le programme Mieux manger pour tous : il ne se contente pas de recommander, il essaie d'améliorer concrètement l'accès à une alimentation plus saine dans l'aide alimentaire. L'Agence Phare en assure le suivi et l'évaluation depuis 2023.</p></div>
-<div class="proof-list">
-  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Fruits et légumes : 3 % du budget PAC · Sénat, rapport n° 672, 2016-2017</span></div>
-  <div class="proof-row"><span class="proof-sym e">≈</span><span class="proof-text">Prix fruits +50 %, légumes +67 % sur 10 ans · Familles Rurales, Observatoire des prix 2022-2024</span></div>
-</div>`,
+      l3f: `<div class="prose"><p>En 1984, le problème est simple à formuler : des entrepôts débordent de nourriture pendant que des gens ont faim. La solution qui émerge est logique : récupérer ce qui allait être détruit, le redistribuer. L'urgence étant de nourrir, personne ne pose la question de ce que ces produits apportent nutritionnellement.</p><p>Cette logique a aussi une contrainte technique réelle. Distribuer des fruits, des légumes ou des produits frais à grande échelle suppose des camions réfrigérés, des entrepôts avec le froid, une rotation rapide des stocks. En 1984, aucune des associations qui se lancent dans l'aide alimentaire ne dispose de cette infrastructure. On travaille avec ce qu'on a : des conserves, des pâtes, des produits secs.</p><p>Mais alors que les moyens et les connaissances évoluent, le cadre de fonctionnement ne change pas. L'aide alimentaire continue de distribuer ce qui est disponible, pas ce dont les bénéficiaires ont besoin.</p><p>De plus, il est très difficile d'imposer des critères nutritionnels sur des dons. On ne peut pas refuser un surplus industriel parce qu'il est trop sucré ou trop transformé.</p><p>En 2014, un premier levier apparaît. Le PEAD (Programme européen d'aide aux plus démunis) est remplacé par le FEAD (Fonds européen d'aide aux plus démunis), qui permet pour la première fois d'acheter des denrées sur le marché plutôt que de distribuer uniquement des surplus. C'est un changement structurel important : on peut désormais choisir ce qu'on distribue. Mais il faudra encore neuf ans pour qu'une politique nationale s'en empare vraiment.</p><p>En 2023, le PMMPT (Programme Mieux manger pour tous) est lancé. Dix-huit ans après le premier diagnostic institutionnel. C'est la première fois qu'une politique publique agit délibérément sur ce qu'il y a dans les colis, pas seulement sur leur volume.</p></div>`,
       l3cf: `<div class="etsi-header"><span class="etsi-badge">Et si ?</span></div>
-<div class="cf-note">Ce raisonnement part de données documentées. Les hypothèses sont expliquées étape par étape.</div>
-<div class="sec-title">Et si la France avait mis en place un mécanisme économique ciblé dès 2001 ?</div>
-<div class="prose"><p>En 2021, l'IGAS (Inspection générale des affaires sociales) et l'IGF (Inspection générale des finances) ont estimé qu'un chèque alimentation de 20 à 30 euros par mois et par personne coûterait entre 1,5 et 3,5 milliards d'euros par an. C'est une estimation de coût potentiel, pas une dépense réellement engagée. ✓</p><p>Le Royaume-Uni a mis en place dès 2006 les Healthy Start vouchers, des bons d'achat destinés aux femmes enceintes et aux familles à faibles revenus. ✓</p><p>Les maladies cardiovasculaires, dont la sous-consommation de fruits et légumes est un facteur de risque documenté, coûtent 29 milliards d'euros par an à l'Assurance maladie française. ✓</p><p>Si un mécanisme comparable avait été déployé en France dès 2001, son coût cumulé sur 25 ans aurait été compris entre 37 et 87 milliards d'euros. ≈</p><p>Ce montant est à mettre en regard du coût annuel des maladies cardiovasculaires. Il ne permet pas de dire combien de dépenses de santé auraient été évitées, car aucune source institutionnelle française ne chiffre précisément la part imputable à la seule sous-consommation de fruits et légumes. ?</p><p>Ce qu'on peut dire, en revanche : deux inspections générales de l'État ont chiffré le mécanisme, mais il n'a pas été généralisé. Pendant 25 ans, les prix des fruits et légumes ont augmenté plus vite que les salaires, et l'objectif du PNNS (Programme national nutrition santé) reste hors d'atteinte pour l'essentiel de la population.</p></div>
+<div class="cf-note">Ce raisonnement part de données documentées. Les hypothèses sont expliquées à chaque étape.</div>
+<div class="sec-title">Et si le PMMPT (Programme Mieux manger pour tous) avait été lancé dès 2005, après le premier diagnostic ?</div>
+<div class="prose"><p>L'étude ABENA documente une surprévalence d'obésité de 11,8 points et un excès de diabète de 5,6 points chez les femmes bénéficiaires, par rapport à la population générale. ✓ Source : InVS/Santé publique France, ABENA 2004-2005 et 2011-2012.</p><p>Le PMMPT est lancé en 2023, dix-huit ans après ce premier diagnostic. Son budget de démarrage est de 60 millions d'euros par an. ✓ Source : DGCS, 2023.</p></div>
+<div class="sec-title">Ce qu'on peut calculer</div>
+<div class="prose"><p>18 ans × 60 M€ = 1,08 milliard d'euros. C'est le coût cumulé d'un programme équivalent qui aurait pu exister dès 2005 et n'a pas existé. ≈</p></div>
+<div class="sec-title">Ce qu'on peut estimer</div>
+<div class="prose"><p>Les femmes représentent 57 % des bénéficiaires de l'aide alimentaire (ABENA 2011-2012), soit environ 2,28 millions de femmes sur une base de 4 millions de bénéficiaires. ✓</p><p>Parmi elles, 8,9 % sont diabétiques, contre 3,3 % en population générale, soit un écart de 5,6 points. ✓ Source : ABENA 2011-2012.</p><p>Cet écart représente environ 128 000 femmes supplémentaires atteintes de diabète par rapport à ce qu'on observerait si leur prévalence correspondait à celle de la population générale. ≈ Calcul : 2,28 millions × 5,6 % = 127 680 cas.</p><p>La prise en charge du diabète coûte en moyenne 2 684 euros par patient et par an. ✓ Source : Cour des comptes, juillet 2025.</p><p>Appliqué à ces 128 000 cas excédentaires : 128 000 × 2 684 € = environ 343 millions d'euros par an. ≈</p><p>Si 25 % de cet excès est attribuable à la qualité nutritionnelle de l'aide alimentaire — hypothèse basse, conservatrice, non vérifiable sans étude causale — le coût annuel pour la collectivité serait de l'ordre de 86 millions d'euros par an, soit environ 1,5 milliard d'euros sur dix-huit ans. ?</p><p>Ces deux montants mesurent des réalités différentes. 1,08 milliard d'euros est le coût d'un programme qui n'a pas existé. 1,5 milliard d'euros est une estimation du coût sanitaire de son absence. Même avec l'hypothèse la plus prudente, le second dépasse le premier.</p></div>
+<div class="sec-title">Ce qu'on ne peut pas calculer</div>
+<div class="prose"><p>La part exacte attribuable à la qualité de l'aide alimentaire. ABENA établit un écart entre bénéficiaires et population générale, pas une cause. D'autres facteurs de précarité jouent un rôle. Ce calcul donne un ordre de grandeur, pas un résultat.</p></div>
 <div class="proof-list">
-  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Coût estimé du chèque alimentation : 1,5 à 3,5 Mds€/an · IGAS/IGF, 2021</span></div>
-  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Healthy Start UK, 2006 · NHS, Healthy Start scheme</span></div>
-  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Coût maladies cardiovasculaires : 29 Mds€/an · CNAM, Points de repère n° 56, juillet 2025</span></div>
-  <div class="proof-row"><span class="proof-sym e">≈</span><span class="proof-text">Coût cumulé du mécanisme sur 25 ans : 37 à 87 Mds€ · Extrapolation arithmétique sur données IGAS/IGF</span></div>
-  <div class="proof-row"><span class="proof-sym c">?</span><span class="proof-text">Part du coût cardiovasculaire imputable à la sous-consommation · Non chiffrable sans source institutionnelle française</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Surprévalence obésité +11,8 points · diabète femmes +5,6 points · InVS/SPF, ABENA 2004-2005 et 2011-2012</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Femmes : 57 % des bénéficiaires · 2,28 M sur 4 M · ABENA 2011-2012</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">Coût diabète : 2 684 €/patient/an · Cour des comptes, juillet 2025</span></div>
+  <div class="proof-row"><span class="proof-sym v">✓</span><span class="proof-text">PMMPT lancé 18 ans après le premier diagnostic · 60 M€/an · DGCS, 2023</span></div>
+  <div class="proof-row"><span class="proof-sym e">≈</span><span class="proof-text">128 000 cas excédentaires de diabète · Calcul : 2,28 M × 5,6 %</span></div>
+  <div class="proof-row"><span class="proof-sym e">≈</span><span class="proof-text">Coût excédentaire estimé : 343 M€/an · 128 000 × 2 684 €</span></div>
+  <div class="proof-row"><span class="proof-sym e">≈</span><span class="proof-text">Coût cumulé d'un programme lancé en 2005 : 1,08 Md€ · 60 M€ × 18 ans</span></div>
+  <div class="proof-row"><span class="proof-sym c">?</span><span class="proof-text">Coût à 25 % d'attribution : ≈ 86 M€/an · 1,5 Md€ sur 18 ans · Hypothèse conservatrice déclarée</span></div>
+  <div class="proof-row"><span class="proof-sym c">?</span><span class="proof-text">Part exacte attribuable à la qualité de l'aide · Non calculable sans étude causale</span></div>
 </div>`,
-      l4: `<div class="sec-title">Politique nutritionnelle</div>
+      l4: `<div class="sec-title">Création et histoire de l'aide alimentaire</div>
 <ul class="src-list">
-  <li>Ministère de la Santé et de la Prévention — Programme national nutrition santé 2001-2005. Paris, 2001.</li>
-  <li>Santé publique France — &laquo; La consommation de fruits et légumes des adultes en France &raquo;, Bulletin épidémiologique hebdomadaire (BEH) n° 13, juin 2025.</li>
+  <li>Fédération Française des Banques Alimentaires (FFBA) — « La belle histoire des Banques Alimentaires », 1984. [Création de la première Banque Alimentaire à Arcueil par Bernard Dandrel, logique de lutte contre le gaspillage.]</li>
+  <li>Fédération Française des Banques Alimentaires — « Une histoire de partage ». [Principes fondateurs : gratuité, don, lutte contre le gaspillage.]</li>
 </ul>
-<div class="sec-title">Politique agricole</div>
+<div class="sec-title">Institutionnalisation européenne</div>
 <ul class="src-list">
-  <li>Sénat — rapport n° 672, &laquo; L'avenir de la politique agricole commune à l'horizon 2020 &raquo;, 2016-2017. [Données sur la répartition du budget PAC : 3 % pour les fruits et légumes.]</li>
+  <li>Règlement CEE n° 3740/87 du Conseil, décembre 1987. [Création du PEAD, redistribution des surplus PAC aux associations caritatives.]</li>
+  <li>Ministère de l'Agriculture — « Programme européen d'aide aux plus démunis (PEAD) », agriculture.gouv.fr. [Fonctionnement du troc PAC/denrées alimentaires.]</li>
+  <li>Sénat — document E7845, « Fonds européen d'aide aux plus démunis ». [Remplacement du PEAD par le FEAD en 2014, règlement UE n° 223/2014.]</li>
 </ul>
-<div class="sec-title">Prix alimentaires</div>
+<div class="sec-title">État nutritionnel des bénéficiaires</div>
 <ul class="src-list">
-  <li>Familles Rurales — Observatoire des prix des fruits et légumes, éditions 2022, 2023 et 2024. [Hausse des prix des fruits et légumes sur 10 ans.]</li>
+  <li>InVS (Institut national de veille sanitaire, devenu Santé publique France) — étude ABENA 2004-2005, rapport épidémiologique. Premiers résultats publiés dans le Bulletin épidémiologique hebdomadaire (BEH) n° 11-12, 21 mars 2006.</li>
+  <li>InVS / ORS Île-de-France / Inpes / DGCS — étude ABENA 2011-2012, « Alimentation et état nutritionnel des bénéficiaires de l'aide alimentaire », rapport publié en mars 2013. [Obésité : 28,8 % des bénéficiaires vs 17 % en population générale. Diabète femmes : 8,9 % vs 3,3 %.]</li>
 </ul>
-<div class="sec-title">Mécanismes économiques ciblés</div>
+<div class="sec-title">Politique nutritionnelle</div>
 <ul class="src-list">
-  <li>IGAS (Inspection générale des affaires sociales) et IGF (Inspection générale des finances) — rapport sur le chèque alimentation, 2021. [Estimation du coût potentiel : 1,5 à 3,5 Mds€/an.]</li>
-  <li>NHS (National Health Service) — Healthy Start scheme, Royaume-Uni, 2006.</li>
+  <li>Ministère de la Santé et de la Prévention — Programme national nutrition santé (PNNS), lancé en 2001. [Recommandation « cinq fruits et légumes par jour », citée en contraste avec la réalité nutritionnelle des bénéficiaires de l'aide alimentaire.]</li>
 </ul>
-<div class="sec-title">Dépenses de santé</div>
+<div class="sec-title">Coût des pathologies</div>
 <ul class="src-list">
-  <li>CNAM (Caisse nationale de l'Assurance maladie) — &laquo; Les déterminants de la croissance des dépenses de santé de 2015 à 2023 : une analyse médicalisée &raquo;, Points de repère n° 56, juillet 2025.</li>
-  <li>CNAM — rapport annuel Charges et produits pour 2026, juillet 2025.</li>
+  <li>Cour des comptes — « Prévention et prise en charge précoce du diabète », juillet 2025. [Coût annuel du diabète : 10,2 Mds€ pour 3,8 millions de patients, soit 2 684 €/patient/an. Utilisé pour l'estimation du Et si ?]</li>
 </ul>
-<div class="sec-title">Cadre réglementaire</div>
+<div class="sec-title">Programme Mieux manger pour tous</div>
 <ul class="src-list">
-  <li>Loi n° 2018-938 du 30 octobre 2018 pour l'équilibre des relations commerciales dans le secteur agricole et alimentaire (loi EGAlim).</li>
-  <li>Code général des impôts, article 1613 ter.</li>
   <li>DGCS (Direction générale de la cohésion sociale) — cahier des charges du programme Mieux manger pour tous (PMMPT), 2023.</li>
+  <li>DGCS — budget PMMPT : 60 M€/an en 2023-2024, 80 M€/an en 2025-2026. [4 millions de bénéficiaires concernés.]</li>
 </ul>
 <div class="sec-title">Note méthodologique</div>
-<div class="prose"><p>Le calcul du Et si ? repose sur les estimations de coût du chèque alimentation publiées par l'IGAS et l'IGF en 2021 (1,5 à 3,5 Mds€/an). La fourchette cumulée sur 25 ans (37 à 87 Mds€) est obtenue par multiplication simple : 1,5 × 25 et 3,5 × 25. Aucune actualisation ou indexation n'a été appliquée. La comparaison avec le coût annuel des maladies cardiovasculaires (29 Mds€) est indicative : aucune source institutionnelle française ne chiffre la part de ce coût directement imputable à la sous-consommation de fruits et légumes.</p></div>`
+<div class="prose"><p>Le calcul du Et si ? repose sur deux raisonnements distincts.</p><p>Premier chiffre (≈ 1,08 Md€) : budget de démarrage du PMMPT (60 M€/an, DGCS 2023) multiplié par 18 ans. Extrapolation arithmétique sans actualisation ni indexation.</p><p>Second chiffre (? ≈ 86 M€/an · 1,5 Md€ sur 18 ans) : excès de diabète documenté chez les femmes bénéficiaires (ABENA 2011-2012 : +5,6 points sur 2,28 millions de femmes = 128 000 cas), multiplié par le coût annuel de prise en charge du diabète (2 684 €/patient/an, Cour des comptes 2025), avec une hypothèse d'attribution de 25 % à la qualité nutritionnelle de l'aide alimentaire.</p><p>Ces deux montants mesurent des réalités différentes : 1,08 Md€ est le coût d'un programme qui n'a pas existé. 1,5 Md€ est une estimation du coût sanitaire de son absence. Les études ABENA établissent un écart de prévalence, pas une causalité directe. L'hypothèse d'attribution (25 %) est conservatrice et déclarée.</p></div>`
     }
   },
 
@@ -2207,7 +2199,7 @@ function copyLink() {
     { id:"kariko",    stat:"170 000–350 000", unit:"",           sub:"Ordre de grandeur · 1989–2006" },
     { id:"education", stat:"15 000 Mds",      unit:"$",               sub:"Coût mondial · 1808–1924" },
     { id:"nourrir",   stat:"1 000 Mds",       unit:"$/an",            sub:"Mondial" },
-    { id:"pnns-sans-prix", stat:"29 Mds", unit:"€/an", sub:"Maladies cardiovasculaires · France · 2023" },
+    { id:"aide-alimentaire-surplus", stat:"86 M", unit:"€/an", sub:"Coût estimé · borne basse · France" },
     { id:"celibat",   stat:"1–4 M",      unit:"victimes",        sub:"Estimées depuis 1139" },
     { id:"adam",      stat:"12 000–28 000", unit:"Mds $/an", sub:"Mondial · depuis 1965" },
   ];
